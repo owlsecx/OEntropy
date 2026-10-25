@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Measure randomness quality of files, text, ║
+OEntropy measures randomness quality of files, text, byte streams, and cryptographic key material. It helps analysts spot compressed/encrypted regions, weak keys, and low-entropy secrets during forensics or crypto review. Headless file/text modes and optional GUI cover both automation and interactive inspection.
 
 ---
 
 ## ✨ Features
 
-- Measure randomness quality of files, text, byte streams, and cryptographic keys
+- Entropy analysis for files and UTF-8 text strings
+- Headless --file / --text modes for pipelines
+- JSON report emission for machine-readable results
+- Optional GUI for interactive randomness inspection
+- Useful for spotting encrypted/compressed blobs in artefacts
+- Supports defensive crypto and forensics triage
 
 ---
 
@@ -38,7 +43,10 @@ Measure randomness quality of files, text, ║
 ## 🚀 Usage
 
 ```bash
-./OEntropy
+./OEntropy --file sample.bin --json
+./OEntropy --text 'password123'
+./OEntropy --gui
+./OEntropy --help
 ```
 
 ---
